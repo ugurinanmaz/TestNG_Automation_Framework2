@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Positive Test">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="email" value="omenoo@mailinator.com"></parameter>
+        <parameter name="passwd" value="Omen1234"></parameter>
+        <classes>
+            <class name="Test.LoginTest">
+                <methods>
+                    <include name="loginFunctionalPositiveTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Negative Test">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="email" value="omenoosa@mailinator.com"></parameter>
+        <parameter name="passwd" value="Omen1234"></parameter>
+        <classes>
+            <class name="Test.LoginTest">
+                <methods>
+                    <include name="loginFunctionalNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Place Order Test">
+        <parameter name="browser" value="chrome"></parameter>
+        <parameter name="email" value="omenoo@mailinator.com"></parameter>
+        <parameter name="passwd" value="Omen1234"></parameter>
+        <classes>
+            <class name="Test.LoginTest">
+                <methods>
+                    <include name="placeAnOrder"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
